@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<head>
+	<title>News</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="gvdcscript.js"></script>
+<style>
+
+p {
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 5em;
+}
+
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #E6E8F2;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#bg {
+	text-align:center;
+	color: white;
+	width: 100%
+	text-transform: uppercase;
+	padding: 15em 0 3em 0;
+	background: url(images/newsbg.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	clear: both;	
+}
+
+input[type=search] {
+	text-align: left;
+	width: 60%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #3F506B;
+	background-color: #EEF0F9;
+	background-image: url(images/search.png);
+	border: 1px solid #DADCE6;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	padding: 15px 20px 15px 40px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s;// ease-in-out;
+}
+
+input[type=search]:focus {
+	width: 80%;
+}
+
+form {
+	padding: 3% 15% 0 15%;
+}
+
+.timeline {
+  list-style-type: none;
+  width: 2px;
+  background: #0057AB;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 450px;
+  background: #EEF0F9;
+  border: 1px solid #DADCE6;
+  margin: 3% 2% 0 2%;
+  -webkit-transition: -webkit-box-shadow .4s;
+  transition: box-shadow .4s;
+}
+
+.timeline:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+time {
+  background: url(images/material1.png) center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  float: left;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+
+.timeline p {
+	bottom: 0;
+	left: 0;	
+	width: 380px:
+	height: 200px;
+	padding: 5%;
+}
+
+time span {
+	font-size: 20px;
+	color: #2B76BD;
+}
+
+.flex-container a {
+	color: #30415A;
+}
+
+.flex-container a:hover {
+	text-decoration: none;
+}
+
+.flex-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+.flex-container strong {
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+.date {
+	font-size: 1.3em;
+}
+
+.ul.page {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+ul.page li {
+	display: inline;
+}
+
+ul.page li a {
+	text-decoration: none;
+	font-size: 1.3em;
+	color: white;
+	text-decoration: none;
+	-webkit-transition: background .4s;
+	transition: background .4s;
+	padding: 7px 15px;
+	background-color: #013EA7;
+	border-radius: 50%;
+	vertical-align: top;
+	margin: .5%;
+}
+
+ul.page li a.active, 
+ul.page li a:hover {
+	background-color: #A5B4C9;
+	color: white;
+	border: 1px solid #A5B4C9;
+	border-radius: 50%;
+}
+
+.page {
+	text-align: center;
+	margin: 3% 2% 3% 2%;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	font-size: 16px;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+a:link, 
+a:visited {
+	text-decoration: none;	
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	padding: 0 5% 3% 5%;
+	color: #476580;
+}
+
+footer hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+footer {
+	background-image: -webkit-radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+
+#bg {
+    padding: 10em 0 3em 0;
+}
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+	input[type=search] {
+	width: 80%;
+}
+
+	input[type=search]:focus {
+	width: 90%;
+}
+	.modal-header{
+	width: 100%;
+	text-align: center;
+}
+}
+
+@media all and (max-width: 1000px) {
+	.flex-container {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	padding: 3% 3% 0 3%;
+}
+
+	.timeline {
+	width: 100%;
+	margin: 0;
+	margin-bottom: 3%;
+}
+}
+
+@media all and (max-width: 950px) {
+	.footer-container {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png"></a>	
+</div>    
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+
+</script>
+
+<!-- NEWS TITLE -->
+<div id="bg">
+	<h1>NEWS</h1><p>What's going on in GVDC</p>
+<form>
+<!-- SEARCH BAR -->
+	<input type="search" name="search" placeholder="SEARCH NEWS">
+</form>
+</div>
+
+<!-- NEWS CARDS -->
+<div class="flex-container">
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+</div>
+<div class="flex-container">
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+</div>
+<div class="flex-container">
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+      <div class="timeline"><a href="article.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| 30 JAN 2016</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+</div>
+</div>
+
+<!-- PAGING -->
+<div class="paging">
+<ul class="page">
+  <li><a class="active" href="#">1</a></li>
+  <li><a href="#">2</a></li>
+  <li><a href="#">3</a></li>
+  <li><a href="#">4</a></li>
+  <li><a href="#">5</a></li>
+  <li><a href="#">&raquo;</a></li>
+</ul>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

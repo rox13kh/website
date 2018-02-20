@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Article</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #EDEFF8;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#bg {
+	text-align:left;
+	color: white;
+	width: 100%
+	text-transform: uppercase;
+	padding: 15em 0 3em 0;
+	background: url(images/article.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	clear: both;	
+}
+
+.first {
+	color: white;
+}
+
+.first h1 {
+	font-size: 3em;
+	padding-left: 15%;
+	text-transform: uppercase;
+}
+
+.first a {
+	color: white;
+	text-decoration: none;
+	font-size: 1em;
+}
+
+#firsttag,
+.first h4 {
+	padding-left: 15%;
+}
+
+.first a:hover {
+	text-decoration: underline;
+}
+
+#mat1 {
+	padding: 10% 7% 7% 0;
+}
+
+.article {
+	padding-left: 15%;
+	max-width: 900px;
+	float: left;
+	padding-bottom: 3%;
+}
+
+.related {
+	margin-top: 3%;
+	float: left;
+	padding-left: 3%;
+}
+
+.related img {
+	margin: 0 1% 3% 0;
+	padding-left: 3%;
+	float: left;
+}
+
+.allnews {
+	padding: 10px 30px;
+	color: white;
+	background: #013EA7;
+	border-radius: 41px;
+	border: 2px solid #013EA7;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-decoration: none;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.allnews:hover {
+	background: white;
+	color: #013EA7;
+	text-decoration: none;
+	border: 2px solid #013EA7;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	font-size: 16px;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+	background: #031C34 80%;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+.footer-item a:link, 
+a:visited {
+	text-decoration: none;	
+}
+
+.footer-item a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	padding: 0 5% 3% 5%;
+	color: #476580;
+	background: #031C34 80%;
+}
+
+footer hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+	width: 100%;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 1200px) {
+
+#bg {
+	padding: 10em 5% 3em 5%;
+}
+
+#firsttag,
+.first h4, 
+.first h1 {
+	padding-left: 0%;
+}
+
+	#mat1, 
+	.article {
+	padding: 0;
+	padding: 3%;
+	width: 100%;
+}
+
+.footer-container {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+}
+
+@media all and (max-width: 800px) {
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+	.modal-header{
+	width: 100%;
+	text-align: center;
+}
+ 	p, h4 {
+	font-size: 16px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div>    
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<!-- ARTICLE LINK TITLE DATE -->
+<div class="first" id=first>
+<div id="bg">
+	<a href="mainpage.html" id=firsttag>HOME</a> &gt; <a href="news.html">NEWS</a> &gt; <a href="article.html"><strong>This is the article page</strong></a>
+	<h1>This is the article page</h1>
+	<h4><strong>&#124;</strong> 15 JANUARY 2016</h4>
+</div>
+</div>
+
+<!-- ARTICLE PICTURE -->
+<div class="article">
+<img src="images/material1.png" id=mat1 alt="news picture">
+
+<!-- ARTICLE TEXT -->
+<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+<br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<!-- RELATED ARTICLES AND ALL NEWS-->
+<div class="related">
+<hr>RELATED ARTICLES<br><br>
+<img src="images/material2.png" id=mat2 alt="related news picture">
+THIS IS THE ARTICLE PAGE<br>15 JAN 2016<br>
+<a href="article.html">Read Article</a><br><br><br>
+<img src="images/material2.png" id=mat2 alt="related news picture">
+THIS IS THE ARTICLE PAGE<br>15 JAN 2016<br>
+<a href="article.html">Read Article</a><br><br><br>
+<img src="images/material2.png" id=mat2 alt="related news picture">
+THIS IS THE ARTICLE PAGE<br>15 JAN 2016<br>
+<a href="article.html">Read Article</a><br><br>
+<hr><br>
+<a href="news.html" class="allnews">ALL NEWS ARTICLE</a><br><br><br>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

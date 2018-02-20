@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Contact Us</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+	<meta name="format-detection" content="telephone=no">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="gvdcscript.js"></script>
+<style>
+
+body, html {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: -webkit-radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+	color: white;	
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+.gvdc-hk, 
+.gvdc-sz, 
+.gvdc-sg, 
+.gvdc-ml {
+	margin: 5% 5% 0 5%;
+}
+
+.col-1-3,
+.col-2-3  {
+	vertical-align: top;
+}
+
+.right, 
+.left {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;	
+}
+
+::-webkit-input-placeholder {
+   color: #3F506B;
+   font-weight: 700;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-weight: 700;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-weight: 700; 
+}
+
+:-ms-input-placeholder {  
+   font-weight: 700;  
+}
+
+input[type=text], 
+input[type=tel], 
+input[type=email], 
+textarea {
+	margin-top: 2%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-weight: 700;
+	width: 50%;
+	text-align: left;
+	color: #3F506B;
+	background-color: #EEF0F9;
+	background-image: url(images/contact.png);
+	border: 1px solid #DADCE6;
+	background-position: 13px 13px;
+	background-repeat: no-repeat;
+	padding: 15px 20px 15px 40px;	
+}
+
+#email input[type=email] {
+	background-image: url(images/email.png);
+}
+
+#tel input[type=tel] {
+	background-image: url(images/telephone.png);
+}
+
+textarea {
+	background-image: url(images/msg.png);
+	font-family: 'Open Sans', sans-serif;
+	resize: none;
+	overflow: auto;
+}
+
+#contactdetails {
+	font-weight: 700;
+	font-size: 1.5em;
+	color: white;
+}
+
+#contactdetails2 {
+	font-size: 1.2em;
+	color: white;
+	padding: 0 5%;
+}
+
+form {
+	padding: 3% 0 5% 0;
+	text-align: center;
+}
+
+form img {
+	margin-right: 3%;
+}
+
+
+input[type=submit] {	
+	margin-top: 5%; 
+	font-size: 1em;
+	padding: 10px 60px;
+	letter-spacing: .12em;
+	color: white;
+	border: 2px solid white;
+	border-radius: 41px;
+	margin: 2%;
+	background: none;
+	cursor: pointer;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input[type=submit]:hover {
+	background: white;
+	color: #013EA7;
+}
+
+.container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+
+.left {
+	background: -webkit-linear-gradient(278deg, #0057A8 0%, rgba(3,22,165,0.6) 70%), url(images/contactusbg.jpg) no-repeat;
+	background: linear-gradient(-188deg, #0057A8 0%, rgba(3,22,165,0.6) 70%), url(images/contactusbg.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	heigth: 100%;
+	padding: 10% 0% 0% 0%;
+}
+
+.right {
+	padding: 7% 0 0 0;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item h4 {
+	margin: 0;
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+a:link, 
+a:visited {
+	text-decoration: none;	
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	margin: 0 5% 3% 5%;
+	color: #476580;
+}
+
+footer hr {
+	border: 1px solid #263E54;
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+    width: 100%;
+}
+
+.modal a, 
+strong {
+	font-size: 27.2px;
+	padding: 0;
+	margin: 0;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+.modal hr {
+	margin: 0;
+}
+
+.right a {
+	color: white;
+	text-decoration: none;
+}
+
+.right a:hover {
+	text-decoration: underline;
+}
+
+address {
+	font-style: normal;
+}
+
+@media all and (max-width: 1200px) {
+	.container{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+	width: 100%;
+	clear: both;
+}
+
+	.footer-container {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+}
+
+input[type=text], 
+input[type=tel], 
+input[type=email], 
+textarea {
+	width: 80%;
+}
+}
+
+@media all and (min-width: 1200px) {
+	section {
+	float: left;
+}
+}
+
+@media all and (max-width: 800px) {
+	.modal-header{
+	text-align: center;
+}
+
+form {
+	padding-top: 15%;
+}
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div>    
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<div class="container">
+<section class="left">
+<div class="grid">
+
+<!-- LEFT CONTACT US FORM -->
+<form>
+<p id=contactdetails>CONTACT US</p>
+<p id=contactdetails2>We will get back to you as soon as possible.</p>
+<div id=contact><span><input type="text" name="contact" placeholder="YOUR NAME" required></span><br></div>
+<div id=email><span><input type="email" name="email" placeholder="EMAIL ADDRESS" required></span><br></div>
+<div id=tel><span><input type="tel" name="telephone" placeholder="TELEPHONE NUMBER" required></span><br></div>
+<div id=msg><span><textarea rows="10" cols="60" placeholder="MESSAGE"></textarea></span></div>
+<input type="submit" value="SEND" id=icon>
+</form>
+</div>
+</section>
+<section class="right">
+
+<!-- RIGHT 4 GVDC ADDRESSES -->
+<div class="grid">
+	<section class="gvdc-hk">
+	<div class="col-1-3">
+	<img src="images/a.png" alt="first address">
+	<h2>GVDC HONG KONG</h2>
+	<a href="tel:+852-3199-0388">(852) 3199 0388</a><address>Room 301-312, 3/F, Metro Centre I,<br>32 Lam Hing Street,<br>Kowloon Bay,<br>Hong Kong</address>
+	</div><br><br>
+	<iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1304.888238662018!2d114.20964321742188!3d22.324109834493886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34040134b0d0acad%3A0x9c3f10b99280bfc!2s301%2C+Metro+Centre+(1)%2C+32+Lam+Hing+St%2C+Kowloon+Bay!5e0!3m2!1sen!2shk!4v1466746547037"  width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> 
+	</section>
+	<section class="gvdc-sz">
+	<div class="col-1-3">
+	<img src="images/b.png" alt="second address">
+	<h2>GVDC SHENZHEN</h2>
+	<a href="tel:+86-755-2216-5373">(86) 755 2216 5373</a><address>1-12 Unit, Level 28, Block A,<br>Xintian Century Business Center,<br>Shixiabei Second Street West,<br>Futian District, Shenzhen,<br>P.R.C</address><br>
+	</div>
+	<iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.0667794860815!2d114.05317999661354!3d22.521623790372203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3403f6ac6c8b036b%3A0x2c22e69fb5ebf737!2sXintian+Century+Business+Center%2C+Futian+Qu%2C+Shenzhen+Shi%2C+Guangdong+Sheng%2C+China%2C+518048!5e0!3m2!1sen!2shk!4v1466746831352" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
+	<section class="gvdc-sg">
+	<div class="col-1-3">
+	<img src="images/c.png" alt="third address">
+	<h2>GVDC SINGAPORE</h2>
+	<a href="tel:+65-6499-1268">(65) 6499 1268</a><address>10 Reaburn Park, Block B, #02-12,<br>Singapore 088702</address><br>
+	</div><br><br>
+	<iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.832913361808!2d103.83121661535365!3d1.2734380621694477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19689c4cdfd5%3A0xf8d2fa334cc6c526!2s10+Raeburn+Park%2C+Singapore+088702!5e0!3m2!1sen!2shk!4v1466747298274" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
+	<section class="gvdc-ml">
+	<div class="col-1-3">
+	<img src="images/d.png" alt="fourth address">
+	<h2>GVDC MALAYSIA</h2>
+	<a href="tel:+65-6499-1268">(65) 6499 1268</a><address>1 Suite 2, 1st Floor 2J-1, Jalan Giam<br>Taman Majidee 80250, Johor Bahru,<br>Johor,<br>Malaysia</address><br>
+	</div>
+	<iframe class="col-2-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.2253916923858!2d103.76352421299067!3d1.500178758314259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6d19e54e6e85%3A0x7f84bf2ed101a435!2s2%2C+Jalan+Giam%2C+Taman+Majidee%2C+80250+Johor+Bahru%2C+Johor%2C+Malaysia!5e0!3m2!1sen!2shk!4v1466747536521" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
+</div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

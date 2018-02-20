@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang=en>
+
+<head>
+	<title>GLOBAL VDC</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+<style>
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #C1C9EE), color-stop(77%, rgba(230,232,242,0.8))), url(images/homepagebg.jpg) repeat center;
+	background: -webkit-linear-gradient(#C1C9EE 20%, rgba(230,232,242,0.8) 77%), url(images/homepagebg.jpg) repeat center;
+	background: linear-gradient(#C1C9EE 20%, rgba(230,232,242,0.8) 77%), url(images/homepagebg.jpg) repeat center;
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+#anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+}
+
+#anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#anchormenu img,
+#anchorquote img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: #30415A;
+}
+
+.flex-container {
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;   
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+
+.flex-item {	
+	background: url(images/rec.png) no-repeat;
+	background-position: top;
+	font-size: 1.5em;
+	color: #3F506B;
+	text-align: center;
+	font-weight: 700;
+	width: 100%;
+	animation: fadeDown 1.5s;
+}
+
+.flex-item a:hover, 
+.flex-item a:focus {	
+	background: url(images/recfilled.png) no-repeat;
+	background-position: top;
+	color: #013EA7;
+	text-shadow: 0 0 30px #3F506B;    
+}
+
+@keyframes fadeDown {
+	from{
+		opacity: 0;
+		transform: translateY(-30px);
+}
+	to{
+		opacity: 1;
+		transform: translateY(0);
+}
+}
+
+@media all and (max-width: 800px) {
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+  .flex-container {
+	top: 17%;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin-bottom: 0%;
+  } 
+
+ .flex-item {
+	text-align: center;
+	margin-top: 5%;
+}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div id=anchormenu>
+<img src="images/anchormenu.png" alt="GVDC logo">
+</div>
+
+<!-- MIDDLE MENU -->
+<div class="menu">
+<div class="flex-container">
+	<div class="flex-item"><a href="homepage.html"><p>SERVICES</p></a></div>
+	<div class="flex-item"><a href="news.html"><p>NEWS</p></a></div>
+	<div class="flex-item"><a href="partners.html"><p>PARTNERS</p></a></div>
+	<div class="flex-item"><a href="project.html"><p>PROJECTS</p></a></div>
+	<div class="flex-item"><a href="contactus.html"><p>CONTACT US</p></a></div>
+</div>
+</div>
+
+</body>
+</html>

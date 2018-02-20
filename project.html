@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>PROJECTS</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="gvdcscript.js"></script>
+
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: #E6E8F2;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#bg {
+	text-align:center;
+	color: white;
+	width: 100%;
+	text-transform: uppercase;
+	padding: 15em 0 5em 0;
+	background: linear-gradient(-188deg, #0057A8 0%, rgba(3,22,165,0.79) 77%), url(images/projectbg.jpg) center;
+	background-size: cover;
+	clear: both;	
+}
+
+.first h1 {
+	font-size: 3em;
+}
+
+.button {
+	background: url(images/button.png) no-repeat center;
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	width: 100%;
+	clear: both;
+	transition: background .2s;
+}
+
+.second {
+	background: url(images/projectdes.png) no-repeat;
+	width: 100%;
+	padding: 5% 0%;
+	color: #30415A;
+}
+
+.second h4, 
+.second p, 
+.projectbutton {
+	clear:both;
+	text-align: left;
+	max-width: 500px;
+	margin-left: 60%;
+}
+
+.projectbutton {
+	padding: 10px 30px;
+	color: white;
+	background: #013EA7;
+	border-radius: 41px;
+	border: 2px solid #013EA7;
+	box-shadow: none;
+	text-decoration: none;
+	transition: background .4s;
+
+}
+
+.projectbutton:hover {
+	background: white;
+	color: #013EA7;
+}
+
+.button:hover {
+	background: url(images/buttonhover.png) no-repeat center;
+	animation: bounce 1s;	
+}
+
+@keyframes bounce {
+	0%, 100% {
+	transform: translateY(0);
+}
+
+	20% {
+	transform: translateY(15px);		
+}
+}
+
+.timeline {
+  list-style-type: none;
+  width: 2px;
+  background: #0057AB;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 450px;
+  background: #EEF0F9;
+  border: 1px solid #DADCE6;
+  margin: 3% 2% 0 2%;
+  transition: box-shadow .4s;
+}
+
+.timeline:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+time {
+  background: url(images/material1.png) center;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  float: left;
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+}
+
+.timeline p {
+	bottom: 0;
+	left: 0;	
+	width: 380px:
+	height: 200px;
+	padding: 5%;
+}
+
+time span {
+	font-size: 20px;
+	color: #2B76BD;
+}
+
+.flex-container a, 
+.flex-container a:hover {
+	color: #30415A;
+	text-decoration: none;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
+}
+
+.flex-container strong {
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+
+
+.footer-item hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	font-size: 16px;
+	display: -webkit-flex;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	justify-content:         center;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+.footer-item a:link,
+.footer-item a:visited {
+	text-decoration: none;	
+}
+
+.footer-item a:hover {
+	text-decoration: underline;
+}
+ 
+#footer {
+	padding: 0 5% 3% 5%;
+	color: #476580;
+}
+
+footer {
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+    width: 100%;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+
+#bg {
+	padding: 10em 0 5em 0;
+}
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+}
+
+@media all and (max-width: 1200px) {
+
+.second {
+	padding: 10% 0;
+}
+
+.second h4, 
+.second p, 
+.projectbutton {
+	color: white;
+	margin: 0 5%;
+}
+
+	.modal-header {
+	text-align: center;
+}
+
+	.flex-container {
+	flex-direction: column;
+	padding: 3% 3% 0 3%;
+}
+	.footer-container {
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+	.timeline {
+	width: 100%;
+	margin: 0;
+	margin-bottom: 3%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div>    
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<!-- PROJECTS LOGO AND BUTTON -->
+<div class="first" id=first>
+<div id="bg">
+	<h1>PROJECTS</h1>
+	<a href="#second"><div class="button"></div></a>
+</div>
+</div>
+
+<!-- LATEST PROJECT DISPLAY -->
+<div class="second" id=second>
+<h4>THIS IS A PROJECT</h4>
+<p><strong>| CLIENT NAME</strong></p>
+<p><strong>| 3D MODELING, 4D & 5D BIM, LASER SCANNING</strong></p><br>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<br><a class="projectbutton" href="project2.html">LEARN MORE</a><br><br>
+</div>
+
+<!-- PROJECT CARDS -->
+<div class="flex-container">
+      <div class="timeline"><a href="project2.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| CLIENT NAME<br>| 3D MODELING</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+      <div class="timeline"><a href="project2.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| CLIENT NAME<br>| 3D MODELING</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+      <div class="timeline"><a href="project2.html">	
+        <time></time>
+	<p><strong>Lorem ipsum dolor sit amet, consectetur adipiscing</strong><br><strong class="date">| CLIENT NAME<br>| 3D MODELING</strong><br>Elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </a></div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

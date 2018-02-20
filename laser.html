@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Laser Scanning</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="gvdcscript.js"></script>
+
+<style>
+p {
+	font-size: 1.3em;
+}
+
+.descript p {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.3em;
+}
+
+h1 {
+	font-size: 5em;
+}
+
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: -webkit-radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);	
+}
+
+header {
+  background: -webkit-linear-gradient(278deg, #0057A8 0%, rgba(3,22,165,0.79) 77%), url(images/laserbg.png);
+  background: linear-gradient(-188deg, #0057A8 0%, rgba(3,22,165,0.79) 77%), url(images/laserbg.png);
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+.firstbutton {
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	margin-right:-50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+}
+
+.wearebutton {
+	font-size: 1em;
+	padding: 7px 30px;
+	letter-spacing: .12em;
+	color: white;
+	border: 2px solid white;
+	border-radius: 41px;
+	margin: 2%;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.wearebutton:hover {
+	color: #013EA7;
+	background: white;
+	text-decoration: none;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  animation: fadeDown 1.3s;
+}
+
+@keyframes fadeDown {
+	from{
+		opacity: 0;
+		transform: translate(-50%, -60%);
+}
+	to{
+		opacity: 1;
+		transform: translate(-50%, -50%);
+}
+}
+
+.title h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title p {
+  margin: 0;
+  padding: 3% 10% 0 10%;
+}
+
+.descript img {
+	margin: 0 0 0 10%;
+}
+
+.head1,
+.head2 {
+	color: #C4DDF5;
+	text-align: left;
+	font-size: 24px;
+}
+
+.head1 {
+	margin: 0 0 0 5%;
+}
+
+.head2 {
+	margin: 3% 10% 5% 5%;
+}
+
+.layer img {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	-webkit-background-size: cover;
+	background-size: cover;
+	clear:both;
+}
+
+.flex-container1 {
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.services {
+	background: url(images/services.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center top;	
+}
+
+.servicesintro {
+	text-align: center;
+	padding: 15% 20% 0 20%;
+	color: white;
+}
+
+#otherservices {
+	text-align: center;
+	margin-top: 4%;
+	color: white;
+}
+
+.flex-item2, 
+.flex-item3 {
+	color: white;
+	text-align: center;
+	margin: 3%;
+}
+
+.flex-container {
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	background-color: white;
+}
+
+.flex-item {
+	background-color: white;
+	width: 100%;
+	margin: 5%;
+	color: #3F506B;
+}
+
+.moreondrones {
+	background: white;
+	padding: 2% 0 2% 0;
+}
+
+.col {
+	-webkit-columns: 3 300px;
+	-moz-columns: 3 300px;
+	columns: 3 300px;
+
+	-webkit-column-gap: 4em;
+	-moz-column-gap: 4em;
+	column-gap: 4em;
+
+	margin: 0 5em 5em 5em;
+	color: #3F506B; 
+	font-size: 20px;
+}
+
+.moreondrones h3 {
+	color: #3F506B;
+	text-align: center;
+	padding: 1.5em;
+}
+
+#add {
+	margin-top: 2%;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+a:link, 
+a:visited {
+	text-decoration: none;	
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	margin: 0 5% 3% 5%;
+	color: #476580;
+	font-size: 1em;
+}
+
+footer hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+	width: 100%;
+}
+
+.modal strong,
+.modal a {
+	font-size: 27.2px;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+p, .descript p {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.col {
+	margin: 0 10% 5% 10%;
+	text-align: center;
+}
+
+.moreondrones h3 {
+	padding: 1em;
+}
+
+.title {
+	width: 80%;
+}
+
+	.title p {
+	padding: 5% 0 0 0;
+}
+
+	.modal-header{
+	width: 100%;
+	text-align: center;
+}
+}
+
+@media all and (max-width: 1000px) {
+  .flex-container, 
+  .flex-container1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+  }
+
+.footer-container {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+  
+	.flex-item,
+	.flex-item1 {
+	margin: 10% 0 0 0;
+}
+
+	.features {
+	background: white;
+	padding: 0 10% 5% 10%;
+} 
+}
+</style>
+</head>
+
+<body>
+<header>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div>
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<!-- FIRST BUTTON LASER TITLE SUBTITLE -->
+<a href="#descript"><img src="images/firstbutton.png" class="firstbutton" alt="button"></a>
+<div class="title" id=title>
+	<img src="images/laserlogo.png" alt="laser logo"><h1>LASER SCANNING</h1><h5>USING POINT CLOUD DATA FOR CONSTRUCTION</h5><p>Translating point clouds collected in situ to a viable 3D model for further processing.</p>
+</div>
+</header>
+
+<!-- LASER BRIEF INTRO -->
+<div class="descript" id=descript>
+	<img src="images/laserstruct.png" align="right" alt="page picture">
+	<p class="head1"><br><br><br><br>FLEXIBLE, ACCURATE <br>BUILDING INFORMATION</p>
+	<p class="head2">In collaboration with Trimble RealWorks, we can process collected data and create deliverables such as color matching and 3D models. We use the information to view, explore, measure and annotate structures both indoors and outdoors.</p>
+</div>
+
+<!-- LASER FEATURES -->
+<div class="features">
+<div class="flex-container">
+  <div class="flex-item"><h5>CLOUD PROCESSING</h5><p>Trimble RealWorks is a comprehensive cloud processing and production software. The software supports even the most standard point cloud formats for manipulation.</p></div>
+  <div class="flex-item"><h5>2D AND 3D DELIVERABLES</h5><p>Trimble RealWorks allows viewing and creation of cross sections, contours, line work, and meshes of structures, with a wide range of 2D and 3D tools.</p></div>
+</div>
+<div class="flex-container">
+  <div class="flex-item"><h5>REGISTRATION</h5><p>Automated registrations and data management services are available through the software. Scan however you want, whether target-less or otherwise, registration will be accurate.</p></div>
+  <div class="flex-item"><h5>INCREDIBLE FLEXIBILITY</h5><p>Manipulate information in commercially used building software. The information then can be integrated in 3/4/5D. Trimble RealWorks has application-specific tools to improve schedules.</p></div>
+</div>
+</div>
+<div class="layer">
+	<img src="images/laserlayer.png" alt="page picture">
+</div>
+
+<!-- MORE ON LASERS -->
+<div class="moreondrones">
+  <h3>MORE ON LASER SCANNING</h3>
+  <div class="col">Manual property surveying and measuring can only be so accurate. Virtual coordination by laser scanning can be used to capture existing structures and integrate with models. How a 3D laser scanner works is by shooting laser beams (at the speed of light) and measuring how long those beams take to come back, then figuring out the distance between the scanner and obstruction. 3D laser scanners are extremely fast and accurate, producing data that can then be used to make viable 3D models. This piece of technology removes the inaccuracies and errors from manual work. Laser scanning has been used extensively for building inspection, comparing as-built conditions to design, reverse engineering and surveying. They will give a lot of insight into hidden cracks and leaks in structures, enabling for immediate handling.</div>
+</div>
+
+<!-- LASER AVAIL SERVICES -->
+<div class="services">
+<div class="servicesintro">
+	<h2>LASER SCANNING SERVICES</h2>
+	<p>EXAMINE YOUR STRUCTURES</p>
+</div>
+<div class="flex-container1">
+	<div class="flex-item2">
+	<img src="images/indoor.png" alt="indoor scan logo">
+	<h5>INDOOR SCAN</h5>
+	<div class="des">
+		<p>Examine floor flatness and level.</p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br>
+	</div>
+	<div class="flex-item2">
+	<img src="images/outdoor.png" alt="outdoor scan logo">
+	<h5>OUTDOOR SCAN</h5>
+	<div class="des">
+		<p>Take exact measurements of structures.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br>
+	</div>
+</div>
+
+<!-- OTHER SERVICES -->
+<h3 id=otherservices>OTHER SERVICES</h3>
+<div class="flex-container1">
+	<div class="flex-item3">
+	<img src="images/drone.png" alt="drones logo">
+	<h4>DRONE SERVICES</h4><p>GEOMAPPING INVOLVED</p><br>
+	<a href="drone.html" class="wearebutton">MORE</a><br>
+	</div>
+	<div class="flex-item3">
+	<img src="images/3d.png" alt="3D logo">
+	<h4>3D MODELING</h4><p>FROM SKETCH TO DIGITAL 3D</p><br>
+	<a href="3d.html" class="wearebutton">MORE</a><br>
+	</div>
+	<div class="flex-item3">
+	<img src="images/45d.png" alt="4D 5D logo">
+	<h4>4D & 5D BIM</h4><p>SCHEDULING AND ESTIMATING</p><br>
+	<a href="45d.html" class="wearebutton">MORE</a><br>
+	</div>
+	<div class="flex-item3">
+	<img src="images/software.png" alt="software logo">
+	<h4>SOFTWARE TRAINING</h4><p>BETTER COLLABORATION</p><br>
+	<a href="software.html" class="wearebutton">MORE</a><br><br>
+	</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

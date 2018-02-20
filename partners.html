@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Partners</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+
+<style>
+
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background: white;
+	background: url(images/partnersbg.png) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+#bg {
+	text-align:center;
+	color: white;
+	width: 100%
+	text-transform: uppercase;
+	padding: 12em 0 3em 0;
+	clear: both;	
+}
+
+.flex-container, 
+.flex-container1 {
+	display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.flex-container1 {
+	margin-bottom: 4%;
+}
+
+.flex-container a, 
+.flex-container1 a {
+	padding: 2%;
+	margin: 1%;
+	background: white;
+}
+
+footer {
+	background-image: -webkit-radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);
+}
+
+.footer-container {	
+	color:#CEE2F5;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	-webkit-box-pack:         center;
+	-ms-flex-pack:         center;
+	justify-content:         center;
+}
+
+.footer-item {
+	padding: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+.footer-item a:link, 
+.footer-item a:visited {
+	text-decoration: none;	
+}
+
+.footer-item a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	padding: 0 5% 3% 5%;
+	color: #476580;
+}
+
+.footer-item hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+	width: 100%;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    font-size: 1em;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal hr {
+	border: .1px solid white;
+	padding: 0;
+	margin: 0;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+
+#bg {
+	padding: 7em 0 3em 0;
+}
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+	.modal-header{
+	width: 100%;
+	text-align: center;
+}
+}
+
+@media all and (max-width: 1000px) {
+.footer-container, 
+.flex-container, 
+.flex-container1 {
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+}
+
+.flex-container a, 
+.flex-container1 a {	
+	text-align: center;
+	padding: 2em;
+}
+
+.flex-container img, 
+.flex-container1 img {
+	width: 140px;
+	height: auto;
+}
+
+.flex-item {
+	height: auto;
+}
+}
+
+</style>
+</head>
+<body>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div> 
+
+<!-- ANCHOR MENU -->   
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<!-- PARTNERS TITLE -->
+<div class="first" id=first>
+<div id="bg">
+	<h1>PARTNERS</h1>
+</div>
+</div>
+
+<!-- PARTNERS LIST -->
+<div class="flex-container">
+	<a href="http://www.vhsoft.com/"><div class="flex-item"><img src="images/vhsoft.jpg" alt="VHSoft logo"></div></a>
+	<a href="http://buildingsmart.org/"><div class="flex-item"><img src="images/buildingsmart.png" alt="buildingSMART logo"></div></a>
+	<a href="http://www.trimble.com/"><div class="flex-item"><img src="images/trimble.png" alt="Trimble logo"></div></a>
+</div>
+
+<div class="flex-container1">
+	<a href="http://www.esri.com/"><div class="flex-item"><img src="images/esri.png" alt="esri logo"></div></a>
+	<a href="http://www.graphisoft.com"><div class="flex-item"><img src="images/graphisoft.png" alt="GRAPHISOFT logo"></div></a>
+	<a href="http://ecodomus.com/"><div class="flex-item"><img src="images/ecodomus.png" alt="ecodomus logo"></div></a>
+	<a href="https://www.kalloctech.com/"><div class="flex-item"><img src="images/fuzor.png" alt="Fuzor logo"></div></a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>

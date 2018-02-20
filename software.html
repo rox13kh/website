@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<title>Software Training</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,800,700' rel='stylesheet' type='text/css'>	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="icon" type="image/png" href="images/logosmall.png" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="gvdcscript.js"></script>
+<style>
+
+p {
+	font-size: 1.3em;
+}
+
+.descript p {
+	font-size: 1.5em;
+}
+
+h5 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 2.3em;
+}
+
+h1 {
+	font-size: 5em;
+}
+
+* {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	box-sizing: border-box; 
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-image: radial-gradient(60% 79%, #012C4D 42%, #031C34 80%);	
+}
+
+header {
+  background: linear-gradient(-188deg, #0057A8 0%, rgba(3,22,165,0.79) 77%), url(images/softwarebg.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+.anchormenu {
+	position: fixed;
+	top: 0;
+	left:50%;
+	transform: translate(-50%, 0);
+	padding: 0;
+	margin: 0;
+	z-index: 1;
+}
+
+.anchorquote {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 5px;
+}
+
+.firstbutton {
+	position: absolute;
+	bottom: 0;
+	left:50%;
+	margin-right:-50%;
+	transform: translate(-50%, 0);
+}
+
+.wearebutton {
+	font-size: 1em;
+	padding: 7px 30px;
+	letter-spacing: .12em;
+	color: white;
+	border: 2px solid white;
+	border-radius: 41px;
+	margin: 2%;
+	transition: .4s;
+}
+
+.wearebutton:hover {
+	color: #013EA7;
+	background: white;
+	text-decoration: none;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  animation: fadeDown 1.3s;
+}
+
+@keyframes fadeDown {
+	from{
+		opacity: 0;
+		transform: translate(-50%, -60%);
+}
+	to{
+		opacity: 1;
+		transform: translate(-50%, -50%);
+}
+}
+
+.title h1 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.title p {
+  margin: 0;
+  padding: 3% 10% 0 10%;
+}
+
+.descript img {
+	margin: 0 5% 0 15%;
+}
+
+.head1, 
+.head2 {
+	color: #C4DDF5;
+	text-align: left;
+	font-size: 24px;	
+}
+
+.head1 {
+	margin: 0 0 0 5%;
+}
+
+.head2 {
+	margin: 3% 10% 5% 5%;
+}
+
+.layer img {
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	background-size: cover;
+	clear:both;
+}
+
+.flex-container1 {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content:         center;
+	padding: 0 10%;
+}
+
+.services {
+	background: url(images/services.jpg);
+	background-size: cover;
+	background-position: center top;	
+}
+
+.servicesintro {
+	text-align: center;
+	padding: 13% 20% 0 20%;
+	color: white;
+}
+
+#otherservices {
+	text-align: center;
+	margin: 1%;
+	color: white;
+}
+
+.flex-item2, 
+.flex-item3 {
+	color: white;
+	text-align: center;
+	margin: 2%;
+}
+
+.flex-item3 {
+	margin: 3%;
+}
+.flex-item2 p {
+	width: 300px;
+	text-align: center;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+
+.flex-item {
+    background-color: white;
+    width:100%;
+    margin: 5% 5% 3% 5% ;
+    color: #3F506B;
+}
+
+.moreondrones {
+	background: white;
+	padding: 2% 0 2% 0;
+}
+
+.col {
+	-webkit-columns: 3 300px;
+	-moz-columns: 3 300px;
+	columns: 3 300px;
+
+	-webkit-column-gap: 4em;
+	-moz-column-gap: 4em;
+	column-gap: 4em;
+
+	margin: 0 5em 5em 5em;
+	color: #3F506B; 
+	font-size: 20px;
+	
+}
+
+.moreondrones h3 {
+	color: #3F506B;
+	text-align: center;
+	padding: 1.5em;
+}
+
+.footer-container {
+	color:#CEE2F5;
+	display: -webkit-flex;
+	display: flex;
+	clear: both;
+	-webkit-justify-content: center;
+	justify-content:         center;
+}
+
+.footer-item {
+	margin: 5%;	
+}
+
+.footer-item a {
+	color:#CEE2F5;
+}
+
+.footer-item img {
+	margin: 1% 0 2% 0;
+}
+
+a:link,
+a:visited { 
+	text-decoration: none;	
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+#footer {
+	margin: 0 5% 3% 5%;
+	color: #476580;
+}
+
+footer hr {
+	border: 1px solid #263E54;
+	margin: 8px 0;
+}
+
+.anchorquote:hover {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 5%; 
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;  
+    background: #013EA7;
+	width: 100%;
+}
+
+.modal strong, 
+.modal a {
+	font-size: 27.2px;
+}
+
+.modal-content {
+    background-color: #F2F8FC;
+    margin: auto;
+    border: 2px solid #124FAC;
+    width: 50%;
+    text-align: right;
+}
+
+.close {
+    color: white;
+    font-size: 2em;
+    padding-right: 0.5em;
+    padding-left: 5%;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+	color: white;
+	font-size: 1.7em;
+	padding: 2% 5%;
+}
+
+.modal a {
+	color: white;
+	text-decoration: none;
+}
+
+@media all and (max-width: 800px) {
+
+.anchormenu img {
+	width: 150px;
+	height: auto;
+}
+
+p, .descript p {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 1.2em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+.col {
+	margin: 0 10% 5% 10%;
+	text-align: center;
+}
+
+.moreondrones h3 {
+	padding: 1em;
+}
+
+	.modal-header {
+	width: 100%;
+	text-align: center;
+}
+
+.title {
+	width: 80%;
+}
+	.title p {
+	padding: 5% 5% 0 5%;
+}
+}
+
+@media all and (max-width: 1300px) {
+  .flex-container, 
+  .flex-container1 {
+    flex-direction: column;
+    text-align: center;
+	margin: 0 0 0 0;
+	padding: 0;
+  }
+
+.flex-container1 {
+	margin: 0 5% 0 5%;
+}
+
+.footer-container {
+	flex-direction: column;
+}
+  
+	.flex-item, 
+	.flex-item1{
+	margin: 10% 0 0 0;
+}
+
+	.flex-item2, 
+	.flex-item3 {
+	margin: 5% 0 0 0;
+	padding: 0;
+}
+
+.flex-item2 p{
+	width: 100%;
+	text-align: center;
+}
+	.features {
+	background: white;
+	padding: 0 10% 5% 10%;
+} 
+}
+
+</style>
+</head>
+<body>
+<header>
+
+<!-- ANCHOR GVDC LOGO -->
+<div class="anchormenu">
+<a href="mainpage.html"><img src="images/anchormenu.png" alt="GVDC logo"></a>	
+</div>    
+
+<!-- ANCHOR MENU -->
+<img src="images/anchorquote.png" class="anchorquote" id="anchorquote" alt="menu">
+<div id="mymodal" class="modal">
+<span class="close">x</span>
+	<div class="modal-header">
+	<a href="mainpage.html"><strong>HOME</strong></a><hr>
+	<a href="project.html">PROJECTS</a><br>
+	<a href="partners.html">PARTNERS</a><br>
+	<a href="contactus.html">CONTACT US</a><br><br>
+	<strong>QUOTE</strong><hr>
+	<a href="quote.html">BUILD QUOTE</a><br><br>
+	<a href="homepage.html"><strong>SERVICES</strong></a><hr>
+	<a href="3d.html">3D MODELING</a><br>
+	<a href="45d.html">4D & 5D BIM</a><br>
+	<a href="laser.html">LASER SCANNING</a><br>
+	<a href="drone.html">DRONE SERVICES</a><br>
+	<a href="software.html">SOFTWARE TRAINING</a><br>
+	<br><hr>
+	<a href="news.html"><strong>NEWS</strong></a><br>
+	</div>
+</div>
+
+<script>
+var modal = document.getElementById('mymodal');
+
+var btn = document.getElementById('anchorquote');
+
+var span = document.getElementsByClassName('close')[0];
+
+btn.onclick = function(){
+	modal.style.display = "block";
+}
+
+span.onclick = function(){
+	modal.style.display = "none";
+}
+
+window.onclick = function(event){
+	if (event.target == modal) {
+	modal.style.display = "none";
+}
+}
+</script>
+
+<!-- FIRST BUTTON SOFTWARE TITLE SUBTITLE -->
+<a href="#descript"><img src="images/firstbutton.png" class="firstbutton" alt="button"></a>
+<div class="title" id=title>
+	<img src="images/softwarelogo.png" alt="software training logo"><h1>SOFTWARE TRAINING</h1><h5>BUILD BETTER TOGETHER, BY UNDERSTANDING THE BUILDING PROCESS</h5><p>Using incredibly advanced yet interactive software, both owners and contractors can now enhance their communication using the cloud.</p>
+</div>
+</header>
+
+<!-- SOFTWARE BRIEF INTRO -->
+<div class="descript" id=descript>
+	<img src="images/softwarestruct.png" align="right" alt="page picture">
+	<p class="head1"><br><br><br><br>DESIGNED FOR EVERYONE</p>
+	<p class="head2">Our curriculum aims to serve the building curiosities of every building team member. We want not only for the informed to deliver better, but also the uncritical to better understand what it takes to build the best structures.</p>
+</div>
+
+<!-- SOFTWARE FEATURES -->
+<div class="features">
+<div class="flex-container">
+  <div class="flex-item"><h5>PARAMETRIC MODELING</h5><p>Learn from creating simple yet dynamic building components in 3D, unleashing your untouched creativity. 2D sketches can be slowly transformed to precise renderings, and later to assembly and fittings.</p></div>
+  <div class="flex-item"><h5>FLEXIBILITY</h5><p>Use the .csv or IFC files in a spectrum of commercial construction software.</p></div>
+</div>
+
+<div class="flex-container">
+  <div class="flex-item"><h5>EFFICIENT AND EFFECTIVE COLLABORATION</h5><p>Explore different options for the fundamental design, prefabrication, schedule and also costs through BIM. Using software like Revit, you can create bidirectional associativity, where any changes are automatically updated in the cloud. This improves teamwork, communication and also schedules.</p></div>
+  <div class="flex-item"><h5>REALISTIC MODELS</h5><p>Not only can one create realistic 3D models, but also design virtual neighborhoods. They provide immersive experience, where virtual navigation of structures is possible. Add 3D models of people, trees and streets by using software like Sketchup PRO.</p></div>
+</div>
+
+<div class="flex-container">
+  <div class="flex-item"><h5>REAL-TIME 3/4/5D MODELING</h5><p>Effective communication is an integral part of the process, hence using the cloud in BIM becomes indispensible. Learn to alter specific parts of the project in real-time with your collaborators, so better design decisions can be made.</p></div>
+  <div class="flex-item"><h5>HOLISTIC APPROACH AND CONTROL</h5><p>Simulate projects, optimize costs and improve schedules by using popular software such as Navisworks and Vico Office. You can understand the whole building process &mdash; from design, scheduling, pricing to crew sizes.</p></div>
+</div>
+</div>
+
+<div class="layer">
+	<img src="images/softlayer.png" alt="page picture">
+</div>
+
+<!-- MORE ON SOFTWARE -->
+<div class="moreondrones">
+  <h3>MORE ON SOFTWARE TRAINING</h3>
+
+  <div class="col">Learn to simulate realistic neighborhoods, alter specific parts of the building in real-time, and also to optimize buildings' finances and schedules. Companies today invest more on training for better construction work. Our curriculum provides the widest range of softwares. By understanding the construction process, you are able to create stronger relationships with people working on and off-site. This will help enhance the project's life cycle. Regardless of your position in the building team, everyone can work together to create even better, more innovative projects in the future. Training is essential, as it teaches the group to be more collaborative. The members of the building group can learn each others' languages to share ideas and provide effective feedback.</div>
+</div>
+
+<!-- SOFTWARE TRAINING AVAIL SERVICES -->
+<div class="services">
+<div class="servicesintro">
+	<h2>SOFTWARE TRAINING</h2>
+	<p>BUILD STRONGER RELATIONSHIPS WITH CONTRACTORS AND COLLABORATORS</p>
+</div>
+
+<div class="flex-container1">
+	<div class="flex-item2">
+	<img src="images/navis.png" alt="NAVISWORKS logo">
+	<h4>NAVISWORKS</h4>
+	<div class="des">
+		<p>Control designs with advanced coordination, 5D analysis and simulation tools.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+	<div class="flex-item2">
+	<img src="images/revit.png" alt="REVIT logo">
+	<h4>REVIT</h4>
+	<div class="des">
+		<p>Develop skills and sample projects, experiencing bidirectional associativity.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+	<div class="flex-item2">
+	<img src="images/archicad.png" alt="ARCHICAD logo">
+	<h4>ARCHICAD</h4>
+	<div class="des">
+		<p>Give architects their design freedom by using the world's first-ever BIM software.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+</div>
+<div class="flex-container1">
+	<div class="flex-item2">
+	<img src="images/vico.png" alt="VICO OFFICE logo">
+	<h4>VICO OFFICE</h4>
+	<div class="des">
+		<p>Manage costs and optimize schedules by using this software.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+	<div class="flex-item2">
+	<img src="images/sketchup.png" alt="SKETCHUP PRO logo">
+	<h4>SKETCHUP PRO</h4>
+	<div class="des">
+		<p>Create drawings and models every step of the way.<br /><br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+	<div class="flex-item2">
+	<img src="images/tekla.png" alt="TEKLA STRUCTURES logo">
+	<h4>TEKLA STRUCTURES</h4>
+	<div class="des">
+		<p>Design and build giant structures.<br /><br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br />
+	</div>
+	<div class="flex-item2">
+	<img src="images/bimx.png" alt="BIMx logo">
+	<h4>BIMX</h4>
+	<div class="des">
+		<p>Bring projects wherever you go using this award-winning software.<br /></p>
+	</div><br>
+	<a href="#" class="wearebutton">ADD TO QUOTE</a><br /><br /><br />
+	</div>
+</div>
+
+<!-- OTHER SERVICES -->
+<h3 id=otherservices>OTHER SERVICES</h3>
+<div class="flex-container1">
+	<div class="flex-item3">
+	<img src="images/drone.png" alt="drones logo">
+	<h4>DRONE SERVICES</h4><p>GEOMAPPING INVOLVED</p><br>
+	<a href="drone.html" class="wearebutton">MORE</a>
+	</div>
+	<div class="flex-item3">
+	<img src="images/3d.png" alt="3D logo">
+	<h4>3D MODELING</h4><p>FROM SKETCH TO DIGITAL 3D</p><br>
+	<a href="3d.html" class="wearebutton">MORE</a><br />
+	</div>
+	<div class="flex-item3">
+	<img src="images/45d.png" alt="4D 5D logo">
+	<h4>4D & 5D BIM</h4><p>SCHEDULING AND ESTIMATING</p><br>
+	<a href="45d.html" class="wearebutton">MORE</a><br />
+	</div>
+	<div class="flex-item3">
+	<img src="images/laser.png" alt="laser logo">
+	<h4>LASER SCANNING</h4><p>INDOOR & OUTDOOR</p><br>
+	<a href="laser.html" class="wearebutton">MORE</a><br><br>
+	</div>
+</div>
+</div>
+
+<!-- FEATURES -->
+<footer>
+<div class="footer-container">
+  <div class="footer-item"><h4><a href="mainpage.html">HOME</a></h4><hr><a href="project.html">PROJECTS</a><br><a href="partners.html">PARTNERS</a><br><a href="contactus.html">CONTACT US</a><br><br><h4>QUOTE</h4><hr><a href="quote.html">BUILD QUOTE</a></div>
+  <div class="footer-item"><h4><a href="homepage.html">SERVICES</a></h4><hr><a href="3d.html">3D MODELING</a><br><a href="45d.html">4D & 5D BIM</a><br><a href="laser.html">LASER SCANNING</a><br><a href="drone.html">DRONE SERVICES</a><br><a href="software.html">SOFTWARE TRAINING</a></div>
+  <div class="footer-item"><h4>NEWS<span style="float: right;"><a href="news.html">&rarr; ALL NEWS</a></span></h4><hr><a href="article.html"><img src="images/material1.png" height="200" alt="news picture"><h4>HAMILTON TICKETS</h4>21 JUNE 2016<br>The ticket for Lin-Manuel Miranda's last show has surged from 10,000 per head to about 20,000 on ticketmaster...<br>READ ARTICLE &rarr;</a></div>
+</div>
+<p id=footer style="text-align:left;">
+COPYRIGHT GLOBAL VDC 2016 ALL RIGHT RESERVED
+<span style="float:right;">SITE BY RUSH HOUR MEDIA</span>
+</p>
+</footer>
+</body>
+</html>
